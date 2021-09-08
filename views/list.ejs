@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>To Do List</title>
+</head>
+<body>
+
+    <div class="box" id="heading">
+        <h1 style="color: rgb(193, 208, 214);">It's a <%= ListTitle %>  .</h1></div>
+        <div class="box">
+            
+                
+                <%   for(var i=0; i< item.length;i++){ %>
+                    <div class="item">
+                        <input type="checkbox">
+                    <p><%= item[i] %> </p>
+                    </div>
+                    <% } %>
+                    
+                <form action="/" method="POST">   
+            
+                    <input type="text" name="additionaltask" placeholder="New Task" autocomplete="off">
+                    <button type="submit" name="add_button" value=<%= ListTitle %> >+</button>
+                        
+            
+                </form>
+                
+            
+        </div>
+        
+
+        
+   
+    
+</body>
+</html>
